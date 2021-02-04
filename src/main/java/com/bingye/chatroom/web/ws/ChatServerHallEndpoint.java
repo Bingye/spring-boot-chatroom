@@ -113,6 +113,8 @@ public class ChatServerHallEndpoint {
                 hall.get(usrname).session.getBasicRemote().sendObject(messageDto);
             } catch (Exception e) {
                 e.printStackTrace();
+                hall.remove(usrname);
+                log.info("移除已失效会话："+usrname);
             }
         });
         log.info("连接关闭");
