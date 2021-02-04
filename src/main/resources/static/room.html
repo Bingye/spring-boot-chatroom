@@ -38,7 +38,7 @@ if ("WebSocket" in window) {
 //获取房间号
 var roomId = getQueryString("roomId");
 
-var wsUrl = 'ws://192.168.3.80/spring-boot-chatroom/websocket/' + roomId;
+var wsUrl = 'ws://localhost/spring-boot-chatroom/websocket/' + roomId;
 //创建链接
 try {
 	if(ws!=null){
